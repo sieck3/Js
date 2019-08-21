@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'pokemon_hollownormal';
+    src: url('../css/font/pokemon_hollow-webfont.woff2') format('woff2'), url('../css/font/pokemon_hollow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.imgAfficher {
+    display: block;
+}
+
+.scores {
+    width: 150px;
+    height: 110px;
+    text-align: center;
+    background-color: blue;
+    margin: 5px;
+    box-shadow: 5px 5px 6px black;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    padding: 0;
+    justify-content: center;
+}
+
+h1 {
+    width: 400px;
+    margin: 0 auto;
+    height: 60px;
+    text-align: center;
+    font-family: 'pokemon_hollownormal';
+    font-size: 35px;
+    text-shadow: 2px 2px 2px red;
+}
+
+/*DEFAULT*/
+
+.label-text, .label-password, .label-number, .label-date, .label-textarea {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    padding: 2px;
+    margin: 4px;
+    height: 15px;
+}
+
+#options {
+    width: 40%;
+    background-color: blueviolet;
+    padding: 8px;
+    height: 200px;
+    box-shadow: 5px 5px 6px black;
+    margin: 5px;
+}
+
+main {
+    width: 800px;
+    /* height: 250px;*/
+    margin: 0 auto;
+    display: flex;
+}
+
+.buttons {
+    width: 150px;
+    margin: 0 auto
+}
+
+.button {
+    /*  float: right;*/
+    width: 60%;
+    margin: 5px;
+    margin-left: 30px;
+    height: 50px;
+    box-shadow: 5px 5px 6px black;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+.divFormulaire {
+    width: 100%;
+    display: flex;
+}
+
+.result {
+    width: 50%;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    margin: 5px;
+}
+
+#paires {
+    width: 30px;
+    height: 20px;
+    margin: 2px;
+}
+
+#facile {
+    background-color: yellow;
+}
+
+.facile {
+    background-color: yellow;
+}
+
+#normal {
+    background-color: green;
+}
+
+.normal {
+    background-color: green;
+}
+
+#difficile {
+    background-color: red;
+}
+
+.difficile {
+    background-color: red;
+}
+
+h3 {}
+
+.showCartes {
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+}
+
+.showCartes:hover {
+    transform: scale(2);
+}
+
+#cartesPosibles {
+    background-color: darkslategray;
+    box-shadow: 5px 5px 6px black;
+}
+
+#divBtnQuitter {
+    margin: 5px;
+}
+
+#buttonQuitter {
+    box-shadow: 5px 5px 6px black;
+    border-radius: 10px;
+    background-color: red;
+}
+
+/*FLIP CARTES*/
+
+.flip-container {
+    perspective: 100px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 5px;
+}
+
+.card {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front {
+    transform: rotateY(180deg);
+    display: flex;
+}
+
+.back {
+    transform: rotateY(0deg);
+    height: 100px;
+}
+
+.front, .back {
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    box-shadow: 5px 5px 6px black;
+}
+
+/*.card:hover, .card.flip {
+    transform: rotateY(180deg);
+}*/
+
+#creditos {
+    width: 100%;
+    background-color: aqua;
+    box-shadow: 5px 5px 6px black;
+}
+
+#creditos h4, a {
+    font-size: 12px;
+    margin: 0;
+}
