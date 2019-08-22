@@ -48,18 +48,43 @@ h2 {
     box-shadow: 4px 4px 4px black;
 }
 
-@media (min-width: 768px) {
-    #botones {
-        display: block;
-        background-color: red;
-        width: 400px;
-        height: 200px;
-        margin: 0 auto;
-    }
-    #arriba {
-        background-color: blue;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-    }
+#botones {
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#di {
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+}
+
+#arriba {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#abajo {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#derecha {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#izquierda {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
 }
