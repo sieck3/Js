@@ -15,6 +15,7 @@ var comer = document.createElement("audio");
 var zelda = document.createElement("audio");
 
 
+
 class Objeto {
     constructor() {
 
@@ -34,6 +35,8 @@ class Objeto {
             return false;
         }
     }
+
+
 
 
 
@@ -155,6 +158,9 @@ function control(event) {
 
     var cod = event.keyCode;
 
+
+    //let container = 
+
     if (ejeX) {
 
         if (cod == 38) {
@@ -208,8 +214,8 @@ function finDeJuego() {
     comida = new Comida();
 
     document.getElementById("fin").innerHTML = ("Juego terminado tu puntuacion es de : " + score + " puntos");
-    comer.setAttribute("src", "loss.mp3");
-    comer.setAttribute("autoplay", "play");
+    comer.setAttribute("src", "music/loss.mp3");
+    comer.setAttribute("autoplay", "music/play");
     //alert("Perdiste tu puntuacion es de :" + " " + score + " " + "puntos");
     score = 0;
 
@@ -280,6 +286,8 @@ function main() {
     movimiento();
 
 
+
+
     if (cabeza.choque(comida)) {
 
         comida.colocar();
@@ -292,6 +300,7 @@ function main() {
 
     }
     document.getElementById("score").innerHTML = score;
+
 
 
     //comida extra
