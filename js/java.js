@@ -16,6 +16,7 @@ var zelda = document.createElement("audio");
 
 
 
+
 class Objeto {
     constructor() {
 
@@ -156,7 +157,7 @@ function movimiento() {
 
 function control(event) {
 
-    var cod = event.keyCode;
+    let cod = event.keyCode;
 
 
     //let container = 
@@ -314,4 +315,6 @@ function main() {
 
 //bucle para repetir el juego sin el nada funciona
 setInterval("main()", velocidad);
+
+
 
