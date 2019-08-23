@@ -81,6 +81,7 @@ const Memoire = (function () {
             normal.innerHTML = 'normal'
             quantite.appendChild(normal)
 
+
             difficil.innerHTML = 'difficile'
             quantite.appendChild(difficil)
             labelQuantite.innerHTML = 'Niveau'
