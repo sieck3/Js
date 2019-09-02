@@ -1,0 +1,83 @@
+.dado {
+    margin: 3px;
+    width: 15%;
+}
+
+.dadoBlue {
+    border: 2px blue solid;
+    margin: 5px;
+    width: 15%;
+}
+
+.dadoRed {
+    border: 2px solid red;
+    margin: 5px;
+    width: 15%;
+}
+
+body {
+    background-color: black;
+    background-image: linear-gradient(to right, black, grey);
+    /* Standard syntax (must be last) */
+    color: white;
+}
+
+h1 {
+    background-color: red;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#containersDe {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+#hand {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    background-color: white;
+    margin: 30px;
+}
+
+#table {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    background-color: white;
+    margin: 30px;
+}
+
+#fullAll {
+    /* visibility: hidden;*/
+    margin: 5%;
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+}
+
+#pointageCourrant {
+    text-align: center;
+}
+
+#pointageCourrant label {
+    font-size: 2.0rem;
+}
+
+.turnPly {
+    background-color: darkturquoise;
+}
+
+.turnPly {
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+#players {
+    text-align: center;
+}
