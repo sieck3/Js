@@ -367,7 +367,7 @@ const DadosGame = (function () {
     return {
         init: function (container) {
             let x = container
-            let table = new Table(3)
+            let table = new Table(2)
             table.build(x)
 
             let hand = document.getElementById('hand')
