@@ -331,7 +331,7 @@ const DadosGame = (function () {
                         removeAllChilds('table')
 
                         let fullAll = createElement('h3', [{ name: 'id', value: 'fullAll' }])
-                        fullAll.innerHTML = 'FULL ALL!'
+                        fullAll.innerHTML = 'FUCK ALL!'
 
                         table.appendChild(fullAll)
                         pointage = 0
