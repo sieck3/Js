@@ -12,7 +12,6 @@ const DadosGame = (function () {
 
         build() {
 
-
             let img = createElement('img', [{ name: 'class', value: ('dado', validation(this.numero)) }, { name: 'name', value: this.numero }, { name: 'src', value: 'img/dee/' + this.numero + '.png' }, { name: 'alt', value: 'dado' }])
 
             return img
@@ -103,7 +102,6 @@ const DadosGame = (function () {
             pontaigeContainer.appendChild(lblPointTableau)
             pontaigeContainer.appendChild(lblPointGarde)
 
-
             btnContainer.appendChild(btnAccept)
             btnContainer.appendChild(btnCancel)
 
@@ -116,13 +114,10 @@ const DadosGame = (function () {
             divContainersDe.appendChild(table)
             divContainersDe.appendChild(pointage)
 
-
             container.appendChild(divContainersDe)
             //jugadores
             container.appendChild(this.createPlayers())
             container.appendChild(menu)
-
-
 
         }
     }
@@ -216,7 +211,7 @@ const DadosGame = (function () {
             removeAllChilds('table')
 
             let fullAll = createElement('h3', [{ name: 'id', value: 'fullAll' }])
-            fullAll.innerHTML = 'FULL ALL!'
+            fullAll.innerHTML = 'FUCK ALL!'
             table.appendChild(fullAll)
 
         }
@@ -347,7 +342,6 @@ const DadosGame = (function () {
 
             }
 
-
             contador = 0
         }
         changeScore(pointage + pt)
@@ -382,7 +376,6 @@ const DadosGame = (function () {
                 changeTurne('true')
 
             }, false)
-
 
             btnAccept.addEventListener('click', function () {
 
