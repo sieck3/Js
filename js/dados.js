@@ -88,10 +88,10 @@ const DadosGame = (function () {
             let btnContainer = createElement('div', [{ name: 'id', value: 'btnContainer' }])
 
             let btnAccept = createElement('button', [{ name: 'class', value: 'btnMenu' }, { name: 'id', value: 'accept' }])
-            btnAccept.innerHTML = 'Tirar'
+            btnAccept.innerHTML = 'Lancer des dés'
 
             let btnCancel = createElement('button', [{ name: 'class', value: 'btnMenu' }, { name: 'id', value: 'cancel' }])
-            btnCancel.innerHTML = 'Tomar'
+            btnCancel.innerHTML = 'Prendre des points'
 
             let pontaigeContainer = createElement('div', [{ name: 'id', value: 'pointageContainer' }])
             let lblPointTableau = createElement('p', { name: 'id', value: 'pointTableau' })
