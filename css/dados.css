@@ -23,10 +23,12 @@ body {
 }
 
 h1 {
-    background-color: red;
+    /*background-color: red;*/
+    color: red;
     text-align: center;
     width: 400px;
     margin: 0 auto;
+    font-size: 3.0em;
 }
 
 #containersDe {
@@ -41,6 +43,7 @@ h1 {
     width: 400px;
     background-color: white;
     margin: 30px;
+    box-shadow: 5px 5px black;
 }
 
 #table {
@@ -49,6 +52,7 @@ h1 {
     width: 400px;
     background-color: white;
     margin: 30px;
+    box-shadow: 5px 5px black;
 }
 
 #fullAll {
@@ -81,3 +85,11 @@ h1 {
 #players {
     text-align: center;
 }
+
+.btnMenu {
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+}
+
+#menu {}
