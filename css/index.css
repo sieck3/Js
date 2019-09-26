@@ -11,7 +11,9 @@
 }
 
 .containerLi {
-    background-color: orange;
+    background-color: coral;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #menu ul {
