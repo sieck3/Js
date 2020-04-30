@@ -8,6 +8,7 @@
 #menu li {
     width: 20%;
     margin: 5px;
+    transition:  1.3s;
 }
 
 .containerLi {
@@ -21,7 +22,7 @@
 }
 
 #menu li:hover {
-    font-size: 30px;
+    font-size: 60px;
     background-color: black;
 }
 
