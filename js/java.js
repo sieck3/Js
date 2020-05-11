@@ -1,6 +1,6 @@
 //Snake code by cesar
 //velocidad del juego, a mayor el numero menor la velocidad
-var velocidad = 50;
+var velocidad = 150;
 
 //tamano de la comida y cuerpo de serpiente
 var tamano = 13;
@@ -15,7 +15,7 @@ var comer = document.createElement("audio");
 var zelda = document.createElement("audio");
 
 
-let UP_KEY = 0
+let UP_KEY = false
 
 class Objeto {
     constructor() {
@@ -120,7 +120,7 @@ class Comida extends Objeto {
 
     dibujar(ctx) {
 
-        ctx.fillStyle = "yellow";
+        ctx.fillStyle = "white";
         //circle
         ctx.beginPath();
         ctx.arc(this.x + 5, this.y + 5, this.tamano - 5, 2, 2 * Math.PI);
@@ -155,12 +155,14 @@ function movimiento() {
 
 }
 
+let cod = 0
+
 function control(event) {
 
-    let cod = event.keyCode;
+    cod = event.keyCode;
 
 
-    
+
 
     if (ejeX) {
 
@@ -170,6 +172,8 @@ function control(event) {
             xDir = 0;
             ejeX = false;
             ejeY = true;
+
+            console.log('UP')
         }
         if (cod == 40) {
             yDir = tamano;
@@ -177,18 +181,20 @@ function control(event) {
             ejeX = false;
             ejeY = true;
 
+            console.log('DOWN')
         }
     }
 
     if (ejeY) {
 
         if (cod == 37) {
-            UP_KEY = 37
+
             yDir = 0;
             xDir = -tamano;
             ejeY = false;
             ejeX = true;
 
+            console.log('LEFT')
         }
         if (cod == 39) {
 
@@ -196,6 +202,7 @@ function control(event) {
             xDir = tamano;
             ejeY = false;
             ejeX = true;
+            console.log('RIGHT')
 
         }
 
@@ -280,19 +287,17 @@ function dibujar() {
 
 
 //funcion para iniciar todos los componentes de juego, *  MASTER
+let UP, DOWN, LEFT, RIGHT
 function main() {
+
+
+
     choqueCuerpo();
     choquePared();
     dibujar();
     movimiento();
 
-    let UP,DOWN,LEFT,RIGHT
 
-    UP = document.getElementById("UP")
-    UP.addEventListener('click', function(){
-        console.log(event.keyCode)
-
-    })
 
 
     if (cabeza.choque(comida)) {
@@ -317,6 +322,61 @@ function main() {
         cabeza.agregar();
     } */
 
+    UP = document.getElementById("UP")
+    DOWN = document.getElementById("DOWN")
+    LEFT = document.getElementById("LEFT")
+    RIGHT = document.getElementById("RIGHT")
+
+    UP.addEventListener('click', function () {
+
+        if (ejeX) {
+
+            yDir = -tamano;
+            xDir = 0;
+            ejeX = false;
+            ejeY = true;
+            console.log('UP')
+        }
+
+    })
+
+    DOWN.addEventListener('click', function () {
+
+        if (ejeX) {
+            yDir = tamano;
+            xDir = 0;
+            ejeX = false;
+            ejeY = true;
+            console.log('DOWN')
+        }
+
+    })
+
+    LEFT.addEventListener('click', function () {
+
+        if (ejeY) {
+            yDir = 0;
+            xDir = -tamano;
+            ejeY = false;
+            ejeX = true;
+
+            console.log('LEFT')
+        }
+
+    })
+
+    RIGHT.addEventListener('click', function () {
+
+        if (ejeY) {
+            yDir = 0;
+            xDir = tamano;
+            ejeY = false;
+            ejeX = true;
+
+            console.log('RIGHT')
+        }
+
+    })
 }
 
 //bucle para repetir el juego sin el nada funciona
