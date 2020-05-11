@@ -11,21 +11,21 @@
 
 <body onkeydown="control(event)">
 
+    <div id="juego">
+        <h1>Snake</h1>
 
-    <h1>Snake</h1>
-
-    <script src="js/java.js"></script>
-    <div id="container_game">
-    <canvas id="canvas" width="400" height="400"></canvas>     
+        <script src="js/java.js"></script>
+        <div id="container_game">
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+        <h2>Score: </h2> <label id="score">0</label><br />
+        <label id="fin"></label>
     </div>
-    <h2>Score: </h2> <label id="score">0</label><br/>
-    <label id="fin"></label>
-
     <div id="control">
         <button id="UP">up</button>
         <div id="conteiner_centre">
-        <button id="LEFT">left</button>
-        <button id="RIGHT">right</button>
+            <button id="LEFT">left</button>
+            <button id="RIGHT">right</button>
         </div>
         <button id="DOWN">down</button>
     </div>

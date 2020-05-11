@@ -1,8 +1,14 @@
-body {
+#juego {
     text-align: center;
-    width: 80%;
-    margin: auto;
+    width: 50%;
+}
+
+body {
+    display: flex;
     background-color: pink;
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
 }
 
 #canvas {
@@ -61,30 +67,37 @@ h2 {
     width: 400px;
 }
 
-#arriba {
+#UP {
     background-color: purple;
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    margin-left: 100px;
 }
 
-#abajo {
+#DOWN {
     background-color: yellow;
     width: 200px;
     height: 200px;
     margin: 0 auto;
+    margin-left: 100px;
 }
 
-#derecha {
+#RIGHT {
     background-color: green;
     width: 200px;
     height: 200px;
     margin: 0 auto;
 }
 
-#izquierda {
+#LEFT {
     background-color: blue;
     width: 200px;
     height: 200px;
     margin: 0 auto;
+}
+
+#control {}
+
+@media only screen and (max-width: 768px) {
+    /* MOBIL SECTION*/
 }
