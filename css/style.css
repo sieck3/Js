@@ -6,9 +6,9 @@ body {
 }
 
 #canvas {
-    border: 5px black solid;
+    border: 4px black solid;
     background-color: blue;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 3px 3px 3px black;
     border-radius: 10px;
 }
 

@@ -15,7 +15,7 @@ var comer = document.createElement("audio");
 var zelda = document.createElement("audio");
 
 
-
+let UP_KEY = 0
 
 class Objeto {
     constructor() {
@@ -132,18 +132,18 @@ class Comida extends Objeto {
 }
 
 //objetos del juego
-var cabeza = new Cola(20, 20);
+let cabeza = new Cola(20, 20);
 
 //bolita para comer
-var comida = new Comida();
+let comida = new Comida();
 //agregue una comida extra
 //var comida1 = new Comida();
 
 
-var ejeX = true;
-var ejeY = true;
-var xDir = 0;
-var yDir = 0;
+let ejeX = true;
+let ejeY = true;
+let xDir = 0;
+let yDir = 0;
 
 
 
@@ -160,7 +160,7 @@ function control(event) {
     let cod = event.keyCode;
 
 
-    //let container = 
+    
 
     if (ejeX) {
 
@@ -183,7 +183,7 @@ function control(event) {
     if (ejeY) {
 
         if (cod == 37) {
-
+            UP_KEY = 37
             yDir = 0;
             xDir = -tamano;
             ejeY = false;
@@ -279,14 +279,20 @@ function dibujar() {
 }
 
 
-//funcion para iniciar todos los componentes de juego, el master
+//funcion para iniciar todos los componentes de juego, *  MASTER
 function main() {
     choqueCuerpo();
     choquePared();
     dibujar();
     movimiento();
 
+    let UP,DOWN,LEFT,RIGHT
 
+    UP = document.getElementById("UP")
+    UP.addEventListener('click', function(){
+        console.log(event.keyCode)
+
+    })
 
 
     if (cabeza.choque(comida)) {
