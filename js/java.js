@@ -1,6 +1,6 @@
 //Snake code by cesar
 //velocidad del juego, a mayor el numero menor la velocidad
-var velocidad = 150;
+var velocidad = 50;
 
 //tamano de la comida y cuerpo de serpiente
 var tamano = 13;
@@ -306,7 +306,7 @@ function main() {
         cabeza.agregar();
         score = score + 10;
         document.getElementById("score").innerHTML = score;
-        comer.setAttribute("src", "mordisco.mp3");
+        comer.setAttribute("src", "music/mordisco.mp3");
         comer.setAttribute("autoplay", "autoplay");
         document.getElementById("fin").innerHTML = ("");
 
