@@ -221,7 +221,7 @@ function finDeJuego() {
     cabeza = new Cola(20, 20);
     comida = new Comida();
 
-    document.getElementById("fin").innerHTML = ("Juego terminado tu puntuacion es de : " + score + " puntos");
+    document.getElementById("fin").innerHTML = ("Game Over : " + score + " pts");
     comer.setAttribute("src", "music/loss.mp3");
     comer.setAttribute("autoplay", "music/play");
     //alert("Perdiste tu puntuacion es de :" + " " + score + " " + "puntos");
@@ -290,38 +290,6 @@ function dibujar() {
 let UP, DOWN, LEFT, RIGHT
 function main() {
 
-
-
-    choqueCuerpo();
-    choquePared();
-    dibujar();
-    movimiento();
-
-
-
-
-    if (cabeza.choque(comida)) {
-
-        comida.colocar();
-        cabeza.agregar();
-        score = score + 10;
-        document.getElementById("score").innerHTML = score;
-        comer.setAttribute("src", "music/mordisco.mp3");
-        comer.setAttribute("autoplay", "autoplay");
-        document.getElementById("fin").innerHTML = ("");
-
-    }
-    document.getElementById("score").innerHTML = score;
-
-
-
-    //comida extra
-    /*
-    if(cabeza.choque(comida1)){
-        comida1.colocar();
-        cabeza.agregar();
-    } */
-
     UP = document.getElementById("UP")
     DOWN = document.getElementById("DOWN")
     LEFT = document.getElementById("LEFT")
@@ -365,7 +333,7 @@ function main() {
 
     })
 
-    RIGHT.addEventListener('click', function () {
+    RIGHT.addEventListener('mousedown', function () {
 
         if (ejeY) {
             yDir = 0;
@@ -377,6 +345,38 @@ function main() {
         }
 
     })
+
+    choqueCuerpo();
+    choquePared();
+    dibujar();
+    movimiento();
+
+
+
+
+    if (cabeza.choque(comida)) {
+
+        comida.colocar();
+        cabeza.agregar();
+        score = score + 10;
+        document.getElementById("score").innerHTML = score;
+        comer.setAttribute("src", "music/mordisco.mp3");
+        comer.setAttribute("autoplay", "autoplay");
+        document.getElementById("fin").innerHTML = ("");
+
+    }
+    document.getElementById("score").innerHTML = score;
+
+
+
+    //comida extra
+    /*
+    if(cabeza.choque(comida1)){
+        comida1.colocar();
+        cabeza.agregar();
+    } */
+
+    
 }
 
 //bucle para repetir el juego sin el nada funciona

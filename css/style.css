@@ -54,8 +54,6 @@ h2 {
     box-shadow: 4px 4px 4px black;
 }
 
-
-
 #di {
     display: flex;
     margin: 0 auto;
@@ -70,7 +68,7 @@ h2 {
 }
 
 #DOWN {
-    background-color: yellow;
+    background-color: red;
     width: 100px;
     height: 100px;
     margin: 0 auto;
@@ -89,43 +87,19 @@ h2 {
     width: 100px;
     height: 100px;
     margin: 0 auto;
+   
 }
 
 #control {
-width: 50%;
-margin-top: 100px;
-margin-left: 50px;
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 50px;
+    
 }
 
-@media only screen and (max-width: 800) {
-    /* MOBIL SECTION*/
-
-    #UP {
-        background-color: red;
-        width: 60px;
-        height: 60px;
-        margin-left: 100px;
-    }
+#control button{  
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 6px;
     
-    #DOWN {
-        background-color: yellow;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        margin-left: 100px;
-    }
-    
-    #RIGHT {
-        background-color: green;
-        width: 100px;
-        height: 100px;
-        margin-left: 100px;
-    }
-    
-    #LEFT {
-        background-color: blue;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-    }
 }
