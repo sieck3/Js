@@ -333,7 +333,7 @@ function main() {
 
     })
 
-    RIGHT.addEventListener('mousedown', function () {
+    RIGHT.addEventListener('touchstart', function () {
 
         if (ejeY) {
             yDir = 0;
