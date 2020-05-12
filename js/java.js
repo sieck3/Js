@@ -295,7 +295,7 @@ function main() {
     LEFT = document.getElementById("LEFT")
     RIGHT = document.getElementById("RIGHT")
 
-    UP.addEventListener('click', function () {
+    UP.addEventListener('touchstart', function () {
 
         if (ejeX) {
 
@@ -308,7 +308,7 @@ function main() {
 
     })
 
-    DOWN.addEventListener('click', function () {
+    DOWN.addEventListener('touchstart', function () {
 
         if (ejeX) {
             yDir = tamano;
@@ -320,7 +320,7 @@ function main() {
 
     })
 
-    LEFT.addEventListener('click', function () {
+    LEFT.addEventListener('touchstart', function () {
 
         if (ejeY) {
             yDir = 0;
