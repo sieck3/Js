@@ -1,18 +1,17 @@
 //Snake code by cesar
 //velocidad del juego, a mayor el numero menor la velocidad
-var velocidad = 50;
+let velocidad = 50
 
 //tamano de la comida y cuerpo de serpiente
-var tamano = 13;
+let tamano = 10
 
 //puntuacion
-var score = 0;
+let score = 0
 
 //sonidos del juego
 
-var comer = document.createElement("audio");
-
-var zelda = document.createElement("audio");
+let comer = document.createElement("audio");
+let zelda = document.createElement("audio");
 
 
 let UP_KEY = false
@@ -25,8 +24,8 @@ class Objeto {
 
     choque(objeto) {
 
-        var difX = Math.abs(this.x - objeto.x);
-        var difY = Math.abs(this.y - objeto.y);
+        let difX = Math.abs(this.x - objeto.x);
+        let difY = Math.abs(this.y - objeto.y);
 
         if (difX >= 0 && difX < tamano && difY >= 0 && difY < tamano) {
 
@@ -36,10 +35,6 @@ class Objeto {
             return false;
         }
     }
-
-
-
-
 
 }
 
@@ -62,8 +57,8 @@ class Cola extends Objeto {
         //circle
         ctx.beginPath();
         ctx.arc(this.x + 5, this.y + 5, this.tamano - 5, 0, 2 * Math.PI);
+        //ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
         ctx.fill();
-        // ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 
     }
 
@@ -106,7 +101,7 @@ class Comida extends Objeto {
 
     general() {
 
-        var num = (Math.floor(Math.random() * 39)) * 10;
+        let num = (Math.floor(Math.random() * 39)) * 10;
         return num;
     }
 
@@ -123,16 +118,16 @@ class Comida extends Objeto {
         ctx.fillStyle = "white";
         //circle
         ctx.beginPath();
-        ctx.arc(this.x + 5, this.y + 5, this.tamano - 5, 2, 2 * Math.PI);
+        //ctx.arc(this.x + 5, this.y + 5, this.tamano - 5, 2, 2 * Math.PI);
+        ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
         ctx.fill();
-        // ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
 
     }
 
 }
 
 //objetos del juego
-let cabeza = new Cola(20, 20);
+let cabeza = new Cola(10, 10);
 
 //bolita para comer
 let comida = new Comida();
@@ -149,8 +144,8 @@ let yDir = 0;
 
 function movimiento() {
 
-    var nx = cabeza.x + xDir;
-    var ny = cabeza.y + yDir;
+    let nx = cabeza.x + xDir;
+    let ny = cabeza.y + yDir;
     cabeza.setXY(nx, ny);
 
 }
@@ -218,7 +213,7 @@ function finDeJuego() {
     yDir = 0;
     ejeX = true;
     ejeY = true;
-    cabeza = new Cola(20, 20);
+    cabeza = new Cola(50, 50);
     comida = new Comida();
 
     document.getElementById("fin").innerHTML = ("Game Over : " + score + " pts");
@@ -282,7 +277,7 @@ function dibujar() {
     comida.dibujar(ctx);
 
     //comida extra
-    //  comida1.dibujar(ctx);
+    //comida1.dibujar(ctx);
 }
 
 
