@@ -31,10 +31,10 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0;
-    text-shadow: 4px 4px 4px black;
+  /*  text-shadow: 4px 4px 4px black;*/
 }
 
 #score {
@@ -42,6 +42,9 @@ h2 {
     font-weight: bold;
     color: red;
     text-shadow: 4px 4px 4px black;
+}
+#score_container{
+    margin: 10px;
 }
 
 #fin {
@@ -102,4 +105,8 @@ h2 {
     color: white;
     border-radius: 6px;
     
+}
+
+#container_game{
+    display: flex;
 }

@@ -101,7 +101,7 @@ class Comida extends Objeto {
 
     general() {
 
-        let num = (Math.floor(Math.random() * 39)) * 10;
+        let num = (Math.floor(Math.random() * 34)) * 10;
         return num;
     }
 
@@ -230,7 +230,7 @@ function finDeJuego() {
 
 function choquePared() {
 
-    if (cabeza.x < 0 || cabeza.x > 390 || cabeza.y < 0 || cabeza.y > 390) {
+    if (cabeza.x < 0 || cabeza.x > 340 || cabeza.y < 0 || cabeza.y > 340) {
 
 
         finDeJuego();
