@@ -49,12 +49,11 @@ h2 {
 
 #fin {
     font-size: 24px;
-    width: 20%;
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    margin-top: 52px;
-    box-shadow: 4px 4px 4px black;
+    width: 100%;
+  /*  background-color: red;*/
+    color: red;
+    padding: 10px;
+ 
 }
 
 #di {
