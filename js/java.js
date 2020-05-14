@@ -1,9 +1,18 @@
 //Snake code by cesar
 //velocidad del juego, a mayor el numero menor la velocidad
-let velocidad = 50
+/*let velocidad = document.getElementById("velocidad")*/
+
+let velocidad = 150
+let on = false
+
+
 
 //tamano de la comida y cuerpo de serpiente
 let tamano = 10
+
+let dificultad = 5
+let subidon = 0
+
 
 //puntuacion
 let score = 0
@@ -209,18 +218,21 @@ function control(event) {
 
 function finDeJuego() {
 
-    xDir = 0;
-    yDir = 0;
-    ejeX = true;
-    ejeY = true;
-    cabeza = new Cola(50, 50);
-    comida = new Comida();
+    xDir = 0
+    yDir = 0
+    ejeX = true
+    ejeY = true
+    cabeza = new Cola(50, 50)
+    comida = new Comida()
 
     document.getElementById("fin").innerHTML = ("Game Over : " + score + " pts");
     comer.setAttribute("src", "music/loss.mp3");
     comer.setAttribute("autoplay", "music/play");
     //alert("Perdiste tu puntuacion es de :" + " " + score + " " + "puntos");
-    score = 0;
+    score = 0
+    velocidad = 150
+    subidon = 0
+    dificultadVelocidad(score,velocidad,subidon,true)
 
 
 }
@@ -236,6 +248,26 @@ function choquePared() {
         finDeJuego();
 
     }
+}
+
+function dificultadVelocidad (velocidad,cpt,on){
+
+    
+
+       if(cpt >= 5 && on == false){
+           clearInterval(interval)
+           velocidad = velocidad - dificultad
+           setInterval("main()", 150);
+           console.log("aumento velocidad = " + velocidad)
+           
+        }
+        
+        if(on){
+            velocidad = 150
+            setInterval("main()", velocidad);
+        }
+        
+        subidon++
 }
 
 //colicion con el cuerpo
@@ -285,6 +317,7 @@ function dibujar() {
 let UP, DOWN, LEFT, RIGHT
 function main() {
 
+    
     UP = document.getElementById("UP")
     DOWN = document.getElementById("DOWN")
     LEFT = document.getElementById("LEFT")
@@ -358,11 +391,13 @@ function main() {
         comer.setAttribute("src", "music/mordisco.mp3");
         comer.setAttribute("autoplay", "autoplay");
         document.getElementById("fin").innerHTML = ("");
+       /* dificultadVelocidad(score,velocidad)*/
+        dificultadVelocidad(velocidad,subidon,false)
+        console.log(score)
 
     }
+
     document.getElementById("score").innerHTML = score;
-
-
 
     //comida extra
     /*
@@ -375,7 +410,8 @@ function main() {
 }
 
 //bucle para repetir el juego sin el nada funciona
-setInterval("main()", velocidad);
+let interval = setInterval("main()",velocidad);
+
 
 
 
