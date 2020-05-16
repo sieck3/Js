@@ -2,7 +2,11 @@
 //velocidad del juego, a mayor el numero menor la velocidad
 /*let velocidad = document.getElementById("velocidad")*/
 
-let velocidad = 150
+//imports 
+//import {Objeto,Cola,Comida} from './Objetos'
+
+
+let velocidad = 100
 let on = false
 
 
@@ -24,6 +28,8 @@ let zelda = document.createElement("audio");
 
 
 let UP_KEY = false
+
+
 
 class Objeto {
     constructor() {
@@ -410,7 +416,7 @@ function main() {
 }
 
 //bucle para repetir el juego sin el nada funciona
-let interval = setInterval("main()",velocidad);
+setInterval("main()",velocidad);
 
 
 
