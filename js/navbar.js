@@ -2,13 +2,6 @@
 const NavBar = (function () {
 
     const LIENS = [
-
-        /*<a href="index.html">Accueil</a>
-            <a href="memoire.html">Memoire</a>
-            <a href="snake.html">Snake</a>
-            <a href="dee.html"> Dice game</a>
-            <a href="projets.html">Projets</a>
-*/
         {
             label: 'Accueil',
             lien: 'index.html'
