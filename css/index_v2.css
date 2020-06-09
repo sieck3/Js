@@ -5,6 +5,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'navbar';
+    src: url('../css/font/navbar/dumadi.woff') format('woff'), url('../css/font/navbar/dumadi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     flex-direction: column;
     height: 100vh;
@@ -28,7 +36,6 @@ header h1 {
     font-family: 'title_font';
     margin: 0;
     margin-left: 1%;
-    padding-top: 1%;
     text-shadow: 5px 2px 4px rgba(150, 150, 150, 1);
 }
 
@@ -37,19 +44,14 @@ header img {
     height: 1900px;
 }
 
-nav {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    font: bold monospace;
-}
-
 nav a {
     text-decoration: none;
     font-family: 'Helvetica', 'Verdana', 'Monaco', sans-serif;
     color: black;
+    margin-top: 2%;
+    font-family: 'navbar';
+    text-align: center;
+
 }
 
 nav a:hover {
@@ -58,4 +60,34 @@ nav a:hover {
 
 .selected {
     text-decoration: underline;
+}
+
+#main_container {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+#main_container nav {
+    padding: 0.5%;
+    font-size: 1.8rem;
+    display: flex;
+    font: bold monospace;
+    background-color: red;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
+    box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
+    width: 8%;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#main_container main {
+    background-color: blue;
+    height: 80%;
+    width: 80%;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding: 5px;
 }
