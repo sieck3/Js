@@ -54,12 +54,17 @@ const NavBar = (function () {
             const URL = window.location;
             let URL_courrante = URL.href.slice(URL.href.indexOf('/Js/') + 4, URL.href.length)
 
+
             x = creationNavbar(container)
             for (let i = 0; i < x.children.length; i++) {
+                console.log('URL COURRANTE', URL_courrante)
+
+
 
                 if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante) {
+
                     console.log('Response: ', x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length))
-                    x.children[i].setAttribute('class', 'select')
+                    x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                 }
             }
 
