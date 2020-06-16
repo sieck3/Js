@@ -1,19 +1,28 @@
 'use strict'
 const NavBar = (function () {
-
+    /* <img src="img/icone/hombre.png" alt="iconeHome"> */
     const LIENS = [
         {
+            label: 'Cesar Trevino',
+            lien: 'index.html',
+            img: 'hombre.png'
+        }
+        ,
+        {
             label: 'Accueil',
-            lien: 'index.html'
+            lien: 'index.html',
+            img: 'navegador.png'
         },
         {
             label: 'Projets',
-            lien: 'projets.html'
+            lien: 'projets.html',
+            img: 'lista.png'
         }
         ,
         {
             label: 'Contact',
-            lien: 'contact.html'
+            lien: 'contact.html',
+            img: 'charla.png'
         }
     ]
 
@@ -32,7 +41,24 @@ const NavBar = (function () {
         for (let i = 0; i < LIENS.length; i++) {
             console.log(LIENS[i].label)
             let a = createElement('a', [{ name: 'href', value: LIENS[i].lien }])
-            a.innerHTML = LIENS[i].label
+            let img = createElement('img', [{ name: 'src', value: 'img/icone/' + LIENS[i].img }])
+            let label = createElement('label', [])
+            label.innerHTML = LIENS[i].label
+            if (i !== 0) {
+                a.appendChild(img)
+            } else {
+
+                let imgIcone = createElement('img', [{ name: 'src', value: 'img/icone/' + 'hombre.png' }])
+                
+                a.setAttribute('id', 'icone_principale')
+                a.appendChild(imgIcone)
+                
+            }
+            //a.innerHTML =  LIENS[i].label
+            // a.appendChild(label)
+            //  a.innerHTML = LIENS[i].label
+            let text = document.createTextNode(LIENS[i].label)
+            a.appendChild(text)
             console.log(a)
             container.appendChild(a)
         }
@@ -56,14 +82,16 @@ const NavBar = (function () {
 
 
             x = creationNavbar(container)
+            x.children[0].setAttribute('class', 'select')
+
             for (let i = 0; i < x.children.length; i++) {
                 console.log('URL COURRANTE', URL_courrante)
 
 
 
-                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante) {
+                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante && x.children[i].innerHTML != 'Cesar Trevino') {
 
-                    console.log('Response: ', x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length))
+                    console.log('Response: ', x.children[i].innerHTML)
                     x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                 }
             }

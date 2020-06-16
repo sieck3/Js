@@ -5,19 +5,12 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'navbar';
-    src: url('../css/font/navbar/dumadi.woff') format('woff'), url('../css/font/navbar/dumadi.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
 }
 
 header {
@@ -44,51 +37,20 @@ header img {
     height: 1900px;
 }
 
-nav a {
-    text-decoration: none;
-    font-family: 'Helvetica', 'Verdana', 'Monaco', sans-serif;
-    color: black;
-    margin-top: 2%;
-    font-family: 'navbar';
-    text-align: center;
-
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 .selected {
     text-decoration: underline;
 }
 
 #main_container {
     display: flex;
-    height: 50%;
+    height: 100%;
     width: 100%;
 }
 
-#main_container nav {
-    padding: 0.5%;
-    font-size: 1.8rem;
-    display: flex;
-    font: bold monospace;
-    flex-direction: column;
-    height: 100%;
-    -webkit-box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
-    box-shadow: 19px 14px 8px -6px rgba(0, 0, 0, 0.51);
-    width: 8%;
-    border-radius: 0px 0px 10px 0px;
-    background-color:  rgb(33, 134, 207);
-}
-
 #main_container main {
-    background-color:white;
     height: 80%;
     width: 80%;
     margin-left: 2%;
     margin-top: 1%;
     padding: 5px;
 }
-
