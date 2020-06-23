@@ -47,16 +47,20 @@ header img {
     width: 100%;
 }
 
+#main_container p {
+    font-size: 0.9rem;
+}
+
+#main_container a {
+    color: gray;
+}
+
 #main_container main {
     height: 80%;
     width: 80%;
     margin-left: 2%;
     margin-top: 1%;
     padding: 5px;
-}
-
-@media only screen and (max-width: 959px) {
-    body {
-        background-color: red;
-    }
+    color: whitesmoke;
+    font-size: 1.2rem;
 }
