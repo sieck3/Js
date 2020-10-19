@@ -68,7 +68,6 @@ class Cola extends Objeto {
             this.siguiente.dibujar(ctx);
         }
         ctx.fillStyle = "red";
-
         //circle
         ctx.beginPath();
         ctx.arc(this.x + 5, this.y + 5, this.tamano - 5, 0, 2 * Math.PI);
@@ -238,7 +237,7 @@ function finDeJuego() {
     score = 0
     velocidad = 150
     subidon = 0
-    dificultadVelocidad(score,velocidad,subidon,true)
+    dificultadVelocidad(score, velocidad, subidon, true)
 
 
 }
@@ -256,24 +255,24 @@ function choquePared() {
     }
 }
 
-function dificultadVelocidad (velocidad,cpt,on){
+function dificultadVelocidad(velocidad, cpt, on) {
 
-    
 
-       if(cpt >= 5 && on == false){
-           clearInterval(interval)
-           velocidad = velocidad - dificultad
-           setInterval("main()", 150);
-           console.log("aumento velocidad = " + velocidad)
-           
-        }
-        
-        if(on){
-            velocidad = 150
-            setInterval("main()", velocidad);
-        }
-        
-        subidon++
+
+    if (cpt >= 5 && on == false) {
+        clearInterval(interval)
+        velocidad = velocidad - dificultad
+        setInterval("main()", 150);
+        console.log("aumento velocidad = " + velocidad)
+
+    }
+
+    if (on) {
+        velocidad = 150
+        setInterval("main()", velocidad);
+    }
+
+    subidon++
 }
 
 //colicion con el cuerpo
@@ -321,9 +320,10 @@ function dibujar() {
 
 //funcion para iniciar todos los componentes de juego, *  MASTER
 let UP, DOWN, LEFT, RIGHT
+
 function main() {
 
-    
+
     UP = document.getElementById("UP")
     DOWN = document.getElementById("DOWN")
     LEFT = document.getElementById("LEFT")
@@ -395,10 +395,10 @@ function main() {
         score = score + 10;
         document.getElementById("score").innerHTML = score;
         comer.setAttribute("src", "music/mordisco.mp3");
-        comer.setAttribute("autoplay", "autoplay");
+        comer.setAttribute("autoplay", "music/play");
         document.getElementById("fin").innerHTML = ("");
-       /* dificultadVelocidad(score,velocidad)*/
-        dificultadVelocidad(velocidad,subidon,false)
+        /* dificultadVelocidad(score,velocidad)*/
+        dificultadVelocidad(velocidad, subidon, false)
         console.log(score)
 
     }
@@ -412,11 +412,11 @@ function main() {
         cabeza.agregar();
     } */
 
-    
+
 }
 
 //bucle para repetir el juego sin el nada funciona
-setInterval("main()",velocidad);
+setInterval("main()", velocidad);
 
 
 
