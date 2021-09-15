@@ -77,19 +77,26 @@ const NavBar = (function () {
             let x = container
             const URL = window.location;
             let URL_courrante = URL.href.slice(URL.href.indexOf('/Js/') + 4, URL.href.length)
-
+            console.log(URL_courrante,"URL COURRANTE");
 
             x = creationNavbar(container)
+
+
             x.children[0].setAttribute('class', 'select')
 
             for (let i = 0; i < x.children.length; i++) {
-                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante) {
+
+                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante ) {
 
                     // console.log('Response: ', x.children[i].innerHTML)
                     x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                     console.log(x,"lista");
 
 
+                }
+
+                if(x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === '' ){
+                    x.children[1].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                 }
             }
 
