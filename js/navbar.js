@@ -96,6 +96,7 @@ const NavBar = (function () {
                 }
 
                 if(URL_courrante === '' ){
+                    console.log('acepta');
                     x.children[1].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                 }
             }
