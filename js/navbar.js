@@ -77,7 +77,7 @@ const NavBar = (function () {
             let x = container
             const URL = window.location;
             let URL_courrante = URL.href.slice(URL.href.indexOf('/Js/') + 4, URL.href.length)
-            console.log(URL_courrante,"URL COURRANTE");
+            console.log(URL_courrante,"URL COURRANTE 1");
 
             x = creationNavbar(container)
 
