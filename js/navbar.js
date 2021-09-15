@@ -60,6 +60,7 @@ const NavBar = (function () {
             let text = document.createTextNode(LIENS[i].label)
             a.appendChild(text)
             console.log(a)
+
             container.appendChild(a)
         }
 
@@ -70,9 +71,6 @@ const NavBar = (function () {
                 }*/
         return container
     }
-
-
-
 
     return {
         init: function (container) {
@@ -86,13 +84,13 @@ const NavBar = (function () {
 
             for (let i = 0; i < x.children.length; i++) {
                 console.log('URL COURRANTE', URL_courrante)
-
-
-
                 if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante && x.children[i].innerHTML != 'Cesar Trevino') {
 
-                    console.log('Response: ', x.children[i].innerHTML)
+                    // console.log('Response: ', x.children[i].innerHTML)
                     x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
+                    console.log(x,"lista");
+
+
                 }
             }
 

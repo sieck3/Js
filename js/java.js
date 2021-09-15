@@ -1,16 +1,10 @@
 //Snake code by cesar
 //velocidad del juego, a mayor el numero menor la velocidad
 /*let velocidad = document.getElementById("velocidad")*/
-
 //imports 
 //import {Objeto,Cola,Comida} from './Objetos'
-
-
 let velocidad = 100
 let on = false
-
-
-
 //tamano de la comida y cuerpo de serpiente
 let tamano = 10
 
@@ -417,7 +411,3 @@ function main() {
 
 //bucle para repetir el juego sin el nada funciona
 setInterval("main()", velocidad);
-
-
-
-

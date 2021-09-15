@@ -5,30 +5,31 @@
     font-style: normal;
 }
 
+
+
 #main_container nav {
     padding: 0.5%;
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     height: 80%;
-    border-right: grey 1px solid;
     width: 15%;
     margin: 2%;
-    /*  background-color: black;
-    */
-    color: gray
-    /* background-color:  rgb(33, 134, 207);*/
+    border-right: grey 1px solid;
+
 }
 
 nav a {
     text-decoration: none;
-    color: gray;
     margin-bottom: 30%;
     font-family: 'navBar';
     text-align: center;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+
+    color: grey;
+
 }
 
 nav a {
@@ -57,4 +58,10 @@ nav a:hover {
 #icone_principale img {
     height: 60px;
     width: 60px;
+}
+
+.select{
+    /* background-color: red; */
+    color: white;
+    
 }
