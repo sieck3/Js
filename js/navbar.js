@@ -83,8 +83,7 @@ const NavBar = (function () {
             x.children[0].setAttribute('class', 'select')
 
             for (let i = 0; i < x.children.length; i++) {
-                console.log('URL COURRANTE', URL_courrante)
-                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante && x.children[i].innerHTML != 'Cesar Trevino') {
+                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante) {
 
                     // console.log('Response: ', x.children[i].innerHTML)
                     x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
