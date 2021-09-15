@@ -95,7 +95,7 @@ const NavBar = (function () {
 
                 }
 
-                if(x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === '' ){
+                if(URL_courrante === '' ){
                     x.children[1].setAttribute('class', (URL_courrante !== '' ? 'select' : ''))
                 }
             }
