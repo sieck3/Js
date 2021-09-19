@@ -1,0 +1,24 @@
+body{
+	border: solid red 2px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+header{
+	border: solid blue 2px;
+}
+
+nav{
+	border: solid green 2px;
+
+}
+
+main{
+	border: solid purple 2px;
+
+}
+
+footer{
+	border: solid black 2px;
+
+}

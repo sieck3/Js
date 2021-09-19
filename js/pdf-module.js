@@ -40,6 +40,6 @@ window.addEventListener('DOMContentLoaded', function loaded(event) {
     window.removeEventListener('DOMContentLoaded', loaded, false)
 
     // instance d'object Module memoire
-    PdfBuilder.init(document.getElementById('pdf_build'));
+    // PdfBuilder.init(document.getElementById('pdf_build'));
 
 }, false)

@@ -11,6 +11,7 @@ body {
     margin: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.89);
+    border: red solid 2px;
 }
 
 header {
@@ -45,6 +46,8 @@ header img {
     display: flex;
     height: 100%;
     width: 100%;
+    border: blue solid 2px;
+
 }
 
 #main_container p {
@@ -52,15 +55,16 @@ header img {
 }
 
 #main_container a {
-    /* color: gray; */
-}
+ }
 
-#main_container main {
+#main_container nav {
+    padding: 0.5%;
+    /* font-size: 1.8rem; */
+    display: flex;
+    flex-direction: column;
     height: 80%;
-    width: 80%;
-    margin-left: 2%;
-    margin-top: 1%;
-    padding: 5px;
-    color: whitesmoke;
-    font-size: 1.2rem;
+    width: 15%;
+    margin: 2%;
+    border-right: grey 1px solid;
 }
+ 

@@ -1,13 +1,9 @@
 'use strict'
-const NavBar = (function () {
-    /* <img src="img/icone/hombre.png" alt="iconeHome"> */
+
+const NavBar = (function() {
+
     const LIENS = [
-        {
-            label: 'Cesar Trevino',
-            lien: 'index.html',
-            img: 'hombre.png'
-        }
-        ,
+
         {
             label: 'Accueil',
             lien: 'index.html',
@@ -17,8 +13,7 @@ const NavBar = (function () {
             label: 'Projets',
             lien: 'projets.html',
             img: 'lista.png'
-        }
-        ,
+        },
         {
             label: 'Contact',
             lien: 'contact.html',
@@ -36,68 +31,58 @@ const NavBar = (function () {
         return element
     }
 
+    function iconPage() {
+        let div = createElement('div', []);
+        let img = createElement('img', [{ name: 'src', value: 'img/icone/' + 'fox.png' }]);
+        let label = createElement('label', []);
+        label.innerHTML = 'Cesar Trevino';
+
+        div.setAttribute('class', 'iconPage');
+        div.appendChild(img);
+        div.appendChild(label);
+
+        return div;
+
+    }
+
     function creationNavbar(container) {
 
-        for (let i = 0; i < LIENS.length; i++) {
-            console.log(LIENS[i].label)
-            let a = createElement('a', [{ name: 'href', value: LIENS[i].lien }])
-            let img = createElement('img', [{ name: 'src', value: 'img/icone/' + LIENS[i].img }])
+        container.appendChild(iconPage());
+
+        LIENS.map((item) => {
+            let a = createElement('a', [{ name: 'href', value: item.lien }])
+            let img = createElement('img', [{ name: 'src', value: 'img/icone/' + item.img }])
             let label = createElement('label', [])
-            label.innerHTML = LIENS[i].label
-            if (i !== 0) {
-                a.appendChild(img)
-            } else {
-
-                let imgIcone = createElement('img', [{ name: 'src', value: 'img/icone/' + 'hombre.png' }])
-                
-                a.setAttribute('id', 'icone_principale')
-                a.appendChild(imgIcone)
-                
-            }
-            //a.innerHTML =  LIENS[i].label
-            // a.appendChild(label)
-            //  a.innerHTML = LIENS[i].label
-            let text = document.createTextNode(LIENS[i].label)
+            label.innerHTML = item.label
+            a.appendChild(img)
+            let text = document.createTextNode(item.label)
             a.appendChild(text)
-            console.log(a)
-
             container.appendChild(a)
-        }
+        })
 
-        /*
-                for (let i = 0; i < LIENS.length;i ++) {
-                    let a = this.createElement('a', [{ name: 'href', value: this.id }, { name: 'class', value: 'card' }])
-                    container.appendChild(img)
-                }*/
         return container
     }
 
     return {
-        init: function (container) {
-            let x = container
+        init: function(container) {
+            let navbar_items = container
             const URL = window.location;
             let URL_courrante = URL.href.slice(URL.href.indexOf('/Js/') + 4, URL.href.length)
+            navbar_items = creationNavbar(container);
 
-            x = creationNavbar(container)
+            for (let i = 0; i < navbar_items.children.length; i++) {
 
-
-            x.children[0].setAttribute('class', 'select')
-
-            for (let i = 0; i < x.children.length; i++) {
-
-                if (x.children[i].href.slice(x.children[i].href.indexOf('/Js/') + 4, x.children[i].href.length) === URL_courrante ) {
-
-
-                    x.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''));
+                if (navbar_items.children[i].href.slice(navbar_items.children[i].href.indexOf('/Js/') + 4, navbar_items.children[i].href.length) === URL_courrante) {
+                    navbar_items.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''));
 
                 }
 
-                if(URL_courrante === '' ){
-                  
-                    x.children[1].setAttribute('class', 'select')
+                if (URL_courrante === '') {
+
+                    navbar_items.children[1].setAttribute('class', 'select')
 
                 }
-    
+
             }
 
         }
