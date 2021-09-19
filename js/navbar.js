@@ -47,7 +47,7 @@ const NavBar = (function() {
 
     function creationNavbar(container) {
 
-        container.appendChild(iconPage());
+        // container.appendChild(iconPage());
 
         LIENS.map((item) => {
             let a = createElement('a', [{ name: 'href', value: item.lien }])

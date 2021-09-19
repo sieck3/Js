@@ -1,24 +1,35 @@
-body{
+body {
 	border: solid red 2px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'header header header header' 'nav main main aside' 'footer footer footer footer';
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 5rem 1fr auto;
+	height: 95vh;
+	background-color: black;
 }
 
-header{
+header {
+	grid-area: header;
 	border: solid blue 2px;
+	background-color: honeydew;
 }
 
-nav{
+nav {
+	grid-area: nav;
 	border: solid green 2px;
-
 }
 
-main{
+aside {
+	grid-area: aside;
 	border: solid purple 2px;
-
 }
 
-footer{
-	border: solid black 2px;
+main {
+	grid-area: main;
+	border: solid purple 2px;
+}
 
+footer {
+	grid-area: footer;
+	border: solid black 2px;
 }
