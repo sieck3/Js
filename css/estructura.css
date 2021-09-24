@@ -27,6 +27,7 @@ aside {
 main {
 	grid-area: main;
 	border: solid purple 2px;
+	color: white;
 }
 
 footer {
