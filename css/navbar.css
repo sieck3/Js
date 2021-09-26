@@ -1,43 +1,35 @@
-@font-face {
-    font-family: 'navBar';
-    src: url('../css/font/navbar/KleinsForgottenRoman.woff') format('woff'), url('../css/font/navbar/KleinsForgottenRoman.woff') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-nav a {
-    color: grey;
-    text-decoration: none;
-    font-family: 'navBar';
-    font-size: 1.1rem;
-    width: 100%;
-}
-
-nav a img {
-    height: 55px;
-    margin: 10px
-}
-
-nav a:hover {
-    color: white;
-    background-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 114, 121, 0.923406862745098) 25%, rgba(0, 212, 255, 1) 100%);
-    background-color: rgb(2, 0, 36);
-}
-
-.select {
-    color: white;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 114, 121, 0.923406862745098) 25%, rgba(0, 212, 255, 1) 100%);
-}
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav a {
+        color: grey;
+        text-decoration: none;
+        font-family: 'navBar';
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    
+    nav a img {
+        height: 55px;
+        margin: 10px
+    }
+    
+    nav a:hover {
+        color: white;
+        background-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 114, 121, 0.923406862745098) 25%, rgba(0, 212, 255, 1) 100%);
+        background-color: rgb(2, 0, 36);
+    }
+    
+    .select {
+        color: white;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 114, 121, 0.923406862745098) 25%, rgba(0, 212, 255, 1) 100%);
+    }
