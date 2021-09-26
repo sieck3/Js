@@ -19,11 +19,9 @@
     }
     aside {
         grid-area: aside;
-        /* border: solid purple 2px; */
     }
     main {
         grid-area: main;
-        /* border: solid purple 2px; */
         color: white;
     }
     footer {
@@ -32,9 +30,9 @@
     }
 }
 
-
-/* @media only screen and (max-width: 639px) {} */
-
 body {
-    background-color: green;
+    background: rgb(86, 99, 99);
+    background: radial-gradient(circle, rgba(86, 99, 99, 1) 9%, rgba(11, 10, 10, 1) 100%);
+    margin: 0;
+    padding: 0;
 }
