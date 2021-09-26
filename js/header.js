@@ -42,7 +42,7 @@ const Header = (function() {
     return {
         init: function(container) {
 
-            let titlePageValue = titlePage('sieck');
+            let titlePageValue = titlePage('Cesar Trevino');
             let iconPageValue = iconPage();
 
             container.appendChild(iconPageValue);

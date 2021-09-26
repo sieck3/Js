@@ -1,6 +1,6 @@
 'use strict'
 
-const NavBar = (function() {
+const NavBar = (function () {
 
     const LIENS = [
 
@@ -47,7 +47,6 @@ const NavBar = (function() {
 
     function creationNavbar(container) {
 
-        // container.appendChild(iconPage());
 
         LIENS.map((item) => {
             let a = createElement('a', [{ name: 'href', value: item.lien }])
@@ -64,22 +63,21 @@ const NavBar = (function() {
     }
 
     return {
-        init: function(container) {
-            let navbar_items = container
+        init: function (container) {
+            let navbar_items = container;
             const URL = window.location;
-            let URL_courrante = URL.href.slice(URL.href.indexOf('/Js/') + 4, URL.href.length)
+            let URL_courrante = window.location.href;
             navbar_items = creationNavbar(container);
 
             for (let i = 0; i < navbar_items.children.length; i++) {
 
-                if (navbar_items.children[i].href.slice(navbar_items.children[i].href.indexOf('/Js/') + 4, navbar_items.children[i].href.length) === URL_courrante) {
-                    navbar_items.children[i].setAttribute('class', (URL_courrante !== '' ? 'select' : ''));
+                if (navbar_items.children[i].href === URL_courrante) {
+                    navbar_items.children[i].setAttribute('class', 'select');
 
                 }
+                if (window.location.pathname === '/') {
 
-                if (URL_courrante === '') {
-
-                    navbar_items.children[1].setAttribute('class', 'select')
+                    navbar_items.children[0].setAttribute('class', 'select')
 
                 }
 
