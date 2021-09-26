@@ -32,9 +32,9 @@
     }
 }
 
+
+/* @media only screen and (max-width: 639px) {} */
+
 body {
     background-color: green;
 }
-
-
-/* @media only screen and (max-width: 639px) {} */
