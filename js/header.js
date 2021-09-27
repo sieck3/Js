@@ -1,4 +1,6 @@
 'use strict'
+
+const TITULO = 'Daniela'
 const Header = (function() {
 
     function createElement(tagName, attributes) {
@@ -42,7 +44,7 @@ const Header = (function() {
     return {
         init: function(container) {
 
-            let titlePageValue = titlePage('Cesar Trevino');
+            let titlePageValue = titlePage(TITULO);
             let iconPageValue = iconPage();
 
             container.appendChild(iconPageValue);

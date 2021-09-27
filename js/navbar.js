@@ -1,6 +1,6 @@
 'use strict'
 
-const NavBar = (function () {
+const NavBar = (function() {
 
     const LIENS = [
 
@@ -63,7 +63,7 @@ const NavBar = (function () {
     }
 
     return {
-        init: function (container) {
+        init: function(container) {
             let navbar_items = container;
             const URL = window.location;
             let URL_courrante = window.location.href;
