@@ -1,0 +1,21 @@
+main{
+    border:solid black 1px;
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+
+main h2{
+    text-align: left;
+}
+
+.main_container_items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_container_items article{
+    border:solid red 3px;
+    width: 400px;
+}
+

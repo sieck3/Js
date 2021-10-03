@@ -1,6 +1,7 @@
 'use strict'
 
-const TITULO = 'Daniela'
+const TITULO = 'Title';
+
 const Header = (function() {
 
     function createElement(tagName, attributes) {
