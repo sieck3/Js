@@ -1,0 +1,23 @@
+{
+    "navbar": {
+        "LINKS": [
+
+            {
+                "label": "Accueil",
+                "lien": "index.html",
+                "img": "navegador.png"
+            },
+            {
+                "label": "Projets",
+                "lien": "projets.html",
+                "img": "lista.png"
+            },
+            {
+                "label": "Contact",
+                "lien": "contact.html",
+                "img": "charla.png"
+            }
+        ]
+    }
+
+}
